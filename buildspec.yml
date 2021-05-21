@@ -6,8 +6,8 @@ phases:
         nodejs: 12
     commands:
       - npm config set puppeteer_skip_chromium_download true -g
-      - npm install -g resume-cli jsonresume-theme-elegant
-      - npm install
+      - npm install -g resume-cli
+      - npm install jsonresume-theme-elegant
       - cd $CODEBUILD_SRC_DIR 
       - aws ssm get-parameter --name moorenix-com-cicd --with-decryption --region us-east-1 --query Parameter.Value --output text > /root/.ssh/id_rsa 
       - chmod 600 /root/.ssh/id_rsa 
