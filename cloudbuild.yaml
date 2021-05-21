@@ -1,0 +1,7 @@
+steps:
+- name: node:14
+  args: ['./build.sh']
+artifacts:
+  objects:
+    location: 'gs://resume.moorenix.com/'
+    paths: ['/workspace/index.html']
